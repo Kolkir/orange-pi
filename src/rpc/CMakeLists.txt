@@ -21,8 +21,12 @@ list(APPEND CMAKE_CXX_FLAGS "-std=c++11 -Wall -Wextra")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 
-file(GLOB SOURCES "*.cpp" "*.h")
+set(SERVER_SOURCES "server.cpp"
+                   "server.h"
+                   "connection.cpp"
+                   "connection.h"
+                   "server_main.cpp")
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-target_link_libraries(${PROJECT_NAME} ${USED_LIBS})
+add_executable(server ${SERVER_SOURCES})
+target_link_libraries(server ${USED_LIBS})
 
