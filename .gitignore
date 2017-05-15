@@ -1,3 +1,7 @@
+#CMake files
+*.user
+build
+
 # Compiled Object files
 *.slo
 *.lo
